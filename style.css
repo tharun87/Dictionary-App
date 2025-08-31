@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    display: flex;
+    background-color: rgb(163, 217, 163);
+    padding: 1rem;
+    font-size: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.input-field {
+    flex-grow: 1;
+    max-width: 600px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+.search-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: rgb(163, 217, 163);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#dark-toggle{
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color:rgb(84, 75, 75);
+    color: white;
+    font-size: 1rem;
+}
+
+.search-btn:hover, #dark-toggle:hover {
+    background-color: #a3cfa3;
+}
+
+.input-field, .search-btn{
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+main{
+    flex: 1;
+    background-color: aliceblue;
+}
+
+.result {
+    padding: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.result h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.result h3 {
+    margin-top: 1rem;
+    color: #2c3e50;
+}
+
+.result hr {
+    margin: 0.5rem 0 1rem 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.meaning-block {
+    margin-top: 1rem;
+}
+
+.example {
+    font-style: italic;
+    color: #555;
+}
+
+.read-more {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.read-more a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.speak-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+footer{
+    background-color: cadetblue;
+    padding: 1rem;
+    text-align: center;
+    font-size: larger;
+    position: static;
+    width: 100%;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .result {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .search-btn,
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #2e7d32;
+    color: white;
+}
+
+body.dark-mode h3, body.dark-mode p, body.dark-mode .speak-btn{
+    color: white;
+}
