@@ -6,8 +6,13 @@ const toggleBtn = document.getElementById("dark-toggle");
 const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
 const get_word_info = async (word) => {
+    if (!word) {
+        result.style.display = "none";
+        return;
+    }
     try {
         result.innerHTML = "<p>🔍 Searching...</p>";
+        result.style.display = "block";
 
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
         if (!response.ok) throw new Error("Word not found");
@@ -60,6 +65,7 @@ const get_word_info = async (word) => {
 
     } catch (error) {
         result.innerHTML = `<p>❌ Could not find the word "<strong>${word}</strong>".</p>`;
+        result.style.display = "block";
         console.error(error);
     }
 };

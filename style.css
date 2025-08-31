@@ -77,7 +77,12 @@ main{
     background-color: aliceblue;
 }
 
+body.dark-mode main {
+    background-color: #121212;
+}
+
 .result {
+    display: none;
     padding: 2rem;
     font-size: 1.1rem;
     line-height: 1.6;
@@ -140,9 +145,14 @@ body.dark-mode {
     color: white;
 }
 
-body.dark-mode .result {
-    background-color: #1e1e1e;
+body.dark-mode {
+    background-color: #000000; /* full black for entire body */
 }
+
+body.dark-mode .result {
+    background-color: #1e1e1e; /* dark gray for result boxes */
+}
+
 
 body.dark-mode .search-btn,
 body.dark-mode header,
